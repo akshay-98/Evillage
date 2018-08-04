@@ -4,6 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:alpha="0.6"
+    android:background="@drawable/vil"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="316dp"
+        android:layout_height="78dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="42dp"
+        android:gravity="center"
+        android:text="Please Choose a Category"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>
