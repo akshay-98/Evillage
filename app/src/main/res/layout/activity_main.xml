@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:alpha="0.6"
+    android:alpha="1"
     android:background="@drawable/vil"
     tools:context=".MainActivity">
 
@@ -22,4 +22,90 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="363dp"
+        android:layout_height="68dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="87dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="76dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="70dp"
+        android:background="@android:color/darker_gray"
+        android:text="Buy"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cropAddText" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="89dp"
+        android:layout_height="61dp"
+        android:layout_marginBottom="76dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="66dp"
+        android:background="@android:color/darker_gray"
+        android:text="Sell"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/cropAddText" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="136dp"
+        android:layout_marginStart="137dp"
+        android:layout_marginTop="13dp"
+        android:onClick="cantFind"
+        android:text="Cant FInd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+    <EditText
+        android:id="@+id/cropAddText"
+        android:layout_width="296dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/holo_blue_light"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Enter here"
+        android:inputType="textPersonName"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/darker_gray"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="75dp"
+        android:layout_height="38dp"
+        android:layout_marginEnd="154dp"
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="14dp"
+        android:text="add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cropAddText" />
 </android.support.constraint.ConstraintLayout>
