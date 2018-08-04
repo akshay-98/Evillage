@@ -1,6 +1,7 @@
 package com.example.evillageapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -20,6 +21,14 @@ public class MainActivity extends AppCompatActivity {
     ArrayAdapter<String> cropAdapter;
     Spinner cropSpinner;
     Button addtoList;
+
+    public void sellCrops(View view)
+    {
+        Intent sellIntent=new Intent(MainActivity.this,SellActivity.class);
+        sellIntent.putExtra("selectedCrop",cropSpinner.getSelectedItem().toString());
+        this.startActivity(sellIntent);
+
+    }
 
     public void cantFind(View view)
     {
