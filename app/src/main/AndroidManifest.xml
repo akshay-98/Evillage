@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".SellActivity" />
-        <activity android:name=".onlineBidActivity"></activity>
+        <activity android:name=".onlineBidActivity" />
+        <activity android:name=".bidPlacedActivity"></activity>
     </application>
 
 </manifest>
