@@ -3,12 +3,20 @@ package com.example.evillageapp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
 public class SellActivity extends AppCompatActivity {
 
     TextView cropName;
+
+    public void onlineBid(View view)
+    {
+        Intent onlineBidIntent=new Intent(SellActivity.this,onlineBidActivity.class);
+        this.startActivity(onlineBidIntent);
+
+    }
 
 
 
