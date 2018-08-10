@@ -5,6 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".onlineBidActivity">
+    <TextView
+        android:id="@+id/cropName"
+        android:layout_width="376dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Crop"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <TextView
         android:id="@+id/dateTextView"
@@ -12,13 +25,13 @@
         android:layout_height="45dp"
         android:layout_marginEnd="163dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="14dp"
         android:gravity="center"
         android:text="Enter Required Date"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/cropName" />
 
     <EditText
         android:id="@+id/dateText"
@@ -28,7 +41,6 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
         android:ems="10"
-        android:gravity="center"
         android:hint="DD/MM/YYYY"
         android:inputType="date"
         app:layout_constraintEnd_toEndOf="parent"
@@ -113,4 +125,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/durationSpinner" />
+
 </android.support.constraint.ConstraintLayout>

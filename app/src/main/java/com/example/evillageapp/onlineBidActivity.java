@@ -9,12 +9,23 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
 public class onlineBidActivity extends AppCompatActivity {
 
     Spinner durationSpinner;
+    FirebaseDatabase database;
+    DatabaseReference myRef;
+    TextView cropName;
+
 
     public void submit(View view)
     {
@@ -27,6 +38,24 @@ public class onlineBidActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_online_bid);
+        cropName=(TextView)findViewById(R.id.cropName);
+        database=FirebaseDatabase.getInstance();
+        myRef=database.getReference("selectedCrop");
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                cropName.setText(dataSnapshot.getValue().toString());
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+                Toast.makeText(onlineBidActivity.this,"Error reading from database",Toast.LENGTH_LONG).show();
+
+
+
+            }
+        });
 
 
 

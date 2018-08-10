@@ -12,6 +12,9 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,12 +24,17 @@ public class MainActivity extends AppCompatActivity {
     ArrayAdapter<String> cropAdapter;
     Spinner cropSpinner;
     Button addtoList;
+    FirebaseDatabase database;
+    DatabaseReference myRef;
 
     public void sellCrops(View view)
     {
         Intent sellIntent=new Intent(MainActivity.this,SellActivity.class);
         sellIntent.putExtra("selectedCrop",cropSpinner.getSelectedItem().toString());
+        myRef = database.getReference("selectedCrop");
+        myRef.setValue(cropSpinner.getSelectedItem().toString());
         this.startActivity(sellIntent);
+
 
     }
 
@@ -57,6 +65,8 @@ public class MainActivity extends AppCompatActivity {
             crops.add(crop);
             cropAdapter.notifyDataSetChanged();
             cropSpinner.setSelection(cropAdapter.getPosition(crop));
+            myRef = database.getReference("cropList");
+            myRef.setValue(crops);
 
         }
         else
@@ -83,6 +93,12 @@ public class MainActivity extends AppCompatActivity {
         cropAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,crops);
         cropSpinner.setAdapter(cropAdapter);
         cropAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        // Write a message to the database
+        database = FirebaseDatabase.getInstance();
+        database.setPersistenceEnabled(true);
+        myRef = database.getReference("cropList");
+        myRef.setValue(crops);
     }
 
 
