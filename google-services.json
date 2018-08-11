@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "444017035052",
+    "firebase_url": "https://evillage-4ea1d.firebaseio.com",
+    "project_id": "evillage-4ea1d",
+    "storage_bucket": "evillage-4ea1d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:444017035052:android:eadfff42aa4c02f8",
+        "android_client_info": {
+          "package_name": "com.example.evillageapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "444017035052-3rth1dkip114m60729f86kk6vv05f6s2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.evillageapp",
+            "certificate_hash": "cccc3157ebe9e11054f993a3f0f4eb431964a770"
+          }
+        },
+        {
+          "client_id": "444017035052-kkoa6fcoqa9526c68rca1qceeb85hlng.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVXhhLIdR2rRXnR69vaEI6MLfQkdOZmtA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "444017035052-kkoa6fcoqa9526c68rca1qceeb85hlng.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

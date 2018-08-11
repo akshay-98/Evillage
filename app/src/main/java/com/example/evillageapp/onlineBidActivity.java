@@ -25,11 +25,21 @@ public class onlineBidActivity extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference myRef;
     TextView cropName;
+    EditText dateText;
+    EditText timeText;
 
 
     public void submit(View view)
     {
         Log.i("info","submit button pressed");
+        dateText=(EditText)findViewById(R.id.dateText);
+        myRef=database.getReference("bidDate");
+        myRef.setValue(dateText.getText().toString());
+        myRef=database.getReference("bidTime");
+        timeText=(EditText)findViewById(R.id.timeText);
+        myRef.setValue(timeText.getText().toString());
+        myRef=database.getReference("bidDuration");
+        myRef.setValue(durationSpinner.getSelectedItem().toString());
         Intent placeBid=new Intent(onlineBidActivity.this,bidPlacedActivity.class);
         this.startActivity(placeBid);
     }
